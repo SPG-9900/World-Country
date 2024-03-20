@@ -1,3 +1,4 @@
+import 'package:url_launcher/url_launcher.dart';
 import 'package:world_country/model/country_model.dart';
 import 'package:world_country/utils/app_colors.dart';
 import 'package:flutter/material.dart';
@@ -90,7 +91,12 @@ class CountryDetailsScreen extends StatelessWidget {
         break;
       case 'map:':
         iconData = Icons.map;
-        break;
+        return GestureDetector(
+          onTap: () {
+            _launchMap(value);
+          },
+          child: _buildDetailRow(label, value, iconData),
+        );
       case 'Timezones:':
         iconData = Icons.access_time;
         break;
@@ -120,6 +126,10 @@ class CountryDetailsScreen extends StatelessWidget {
         break;
     }
 
+    return _buildDetailRow(label, value, iconData);
+  }
+
+  Widget _buildDetailRow(String label, String value, IconData iconData) {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 5.0),
       padding: const EdgeInsets.all(10.0),
@@ -162,5 +172,9 @@ class CountryDetailsScreen extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  void _launchMap(String mapsUrl) async {
+    await launch(mapsUrl);
   }
 }
