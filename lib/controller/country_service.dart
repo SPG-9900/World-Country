@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:chilltest/model/country_model.dart';
+import 'package:world_country/model/country_model.dart';
 
 class CountryService {
   Future<List<Country>> fetchCountries() async {

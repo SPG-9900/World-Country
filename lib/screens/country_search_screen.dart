@@ -1,7 +1,7 @@
-import 'package:chilltest/controller/country_service.dart';
-import 'package:chilltest/model/country_model.dart';
-import 'package:chilltest/screens/details_screen.dart';
-import 'package:chilltest/utils/app_colors.dart';
+import 'package:world_country/controller/country_service.dart';
+import 'package:world_country/model/country_model.dart';
+import 'package:world_country/screens/details_screen.dart';
+import 'package:world_country/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

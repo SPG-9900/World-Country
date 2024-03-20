@@ -1,5 +1,5 @@
-import 'package:chilltest/model/country_model.dart';
-import 'package:chilltest/utils/app_colors.dart';
+import 'package:world_country/model/country_model.dart';
+import 'package:world_country/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 

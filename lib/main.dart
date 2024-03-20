@@ -1,5 +1,5 @@
-import 'package:chilltest/screens/country_search_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:world_country/screens/country_search_screen.dart';
 
 void main() => runApp(const MyApp());
 
