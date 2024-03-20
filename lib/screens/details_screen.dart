@@ -27,7 +27,7 @@ class CountryDetailsScreen extends StatelessWidget {
                 isDarkMode ? AppColors.darkTextColor : AppColors.lightTextColor,
           ),
         ),
-        automaticallyImplyLeading: true, // Set to true by default
+        automaticallyImplyLeading: true,
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back,
@@ -146,28 +146,31 @@ class CountryDetailsScreen extends StatelessWidget {
             color: AppColors.black,
           ),
           const SizedBox(width: 10),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                label,
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                  color: AppColors.black,
+          Expanded(
+            // Wrap the Row with Expanded
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  label,
+                  style: const TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: AppColors.black,
+                  ),
                 ),
-              ),
-              const SizedBox(height: 5),
-              Text(
-                value,
-                style: TextStyle(
-                  fontSize: 14,
-                  color: isDarkMode
-                      ? AppColors.darkTextColor
-                      : AppColors.lightTextColor,
+                const SizedBox(height: 5),
+                Text(
+                  value,
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: isDarkMode
+                        ? AppColors.darkTextColor
+                        : AppColors.lightTextColor,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ],
       ),
